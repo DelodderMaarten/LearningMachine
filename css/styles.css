@@ -1,0 +1,15 @@
+.c-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c-content__canvas{
+    width: 40rem ;
+    height: 25rem ;
+   border: 0.5rem black solid;
+
+  
+}
