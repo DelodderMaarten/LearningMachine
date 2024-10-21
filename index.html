@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="loading">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gesture Garden</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HandPose</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
-    <main >
-        <div class="c-content">
-            <h1>Gesture Garden</h1>
-            <canvas id="canvas" class="c-content__canvas"></canvas>
-        </div>
-    </main>
+  <h1 class="h1">HandPose</h1>
+  <h2 id="state"></h2>
+  <canvas id="canvas" class="fancy-shadow hidden display-running"></canvas>
+  <script src="https://unpkg.com/ml5@1/dist/ml5.js"></script>
+  <script src="js/handposescript.js"></script>
 </body>
 </html>
