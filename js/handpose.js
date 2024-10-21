@@ -1,5 +1,4 @@
 
-
     const $canvas = document.querySelector('#canvas');
     const $state = document.querySelector('#state');
 
@@ -22,13 +21,12 @@
 
     const preload = async () => {
       setState(STATE_LOADING);
-      requestAnimationFrame(draw);
       handPose = ml5.handPose();
       await handPose.ready;
       console.log('model ready');
       setup();
     }
-
+    
     const setup = async () => {
       console.log('setup');
       ctx = $canvas.getContext('2d');
@@ -50,7 +48,43 @@
       });
       // start the app
       setState(STATE_RUNNING);
+      // Start the drawing loop here instead
+      requestAnimationFrame(draw);
     }
+    
+
+
+    // const preload = async () => {
+    //   setState(STATE_LOADING);
+    //   requestAnimationFrame(draw);
+    //   handPose = ml5.handPose();
+    //   await handPose.ready;
+    //   console.log('model ready');
+    //   setup();
+    // }
+
+    // const setup = async () => {
+    //   console.log('setup');
+    //   ctx = $canvas.getContext('2d');
+    //   // create a video stream - specify a fixed size
+    //   const stream = await navigator.mediaDevices.getUserMedia({ video: {
+    //     width: 640,
+    //     height: 480
+    //   } });
+    //   video = document.createElement('video');
+    //   video.srcObject = stream;
+    //   video.play();
+    //   // set canvas & video size
+    //   $canvas.width = video.width = 640;
+    //   $canvas.height = video.height = 480;
+    //   // start detecting poses
+    //   handPose.detectStart(video, (results) => {
+    //     // store the results in a global
+    //     hands = results;
+    //   });
+    //   // start the app
+    //   setState(STATE_RUNNING);
+    // }
 
     const draw = () => {
       

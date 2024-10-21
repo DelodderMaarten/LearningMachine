@@ -8,3 +8,16 @@
 .running .display-running {
   display: block;
 }
+  #results {
+    background-color: white;
+    width: 20rem;
+    min-height: 6rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .running #results {
+    display: flex;
+  }
