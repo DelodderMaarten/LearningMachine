@@ -1,0 +1,65 @@
+.c-loading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.loader-container {
+    position: relative;
+    text-align: center;
+  }
+
+  .loader {
+    margin-top: 10rem;
+    width: 9rem;
+    height: 9rem;
+    position: relative;
+  }
+
+  .loader div {
+    position: absolute;
+    width: 1rem;      /* Oval width */
+    height: 2.5rem;     /* Oval height */
+    background-color: #9f5e1d;
+    border-radius: 50% ;  /* Make them ovals */
+    animation: loader-animation 1.2s infinite ease-in-out;
+  }
+
+  /* Position the 8 ovals in a circular path */
+  .loader div:nth-child(1) { top: 0; left: 50%; transform: translate(-50%, -50%); }
+  .loader div:nth-child(2) { top: 15%; left: 85%; transform: translate(-50%, -50%) rotate(45deg); }
+  .loader div:nth-child(3) { top: 50%; left: 100%; transform: translate(-50%, -50%) rotate(90deg); }
+  .loader div:nth-child(4) { top: 85%; left: 85%; transform: translate(-50%, -50%) rotate(135deg); }
+  .loader div:nth-child(5) { top: 100%; left: 50%; transform: translate(-50%, -50%) rotate(180deg); }
+  .loader div:nth-child(6) { top: 85%; left: 15%; transform: translate(-50%, -50%) rotate(225deg); }
+  .loader div:nth-child(7) { top: 50%; left: 0; transform: translate(-50%, -50%) rotate(270deg); }
+  .loader div:nth-child(8) { top: 15%; left: 15%; transform: translate(-50%, -50%) rotate(315deg); }
+
+  /* Animate the opacity of each oval in sequence to create a rotation effect */
+  @keyframes loader-animation {
+    0%, 100% { background-color: #9f5e1d; }
+    12.5% { background-color: #b9854e; }
+    25% { background-color: #b9854e; }
+    37.5% { background-color: #b9854e; }
+    50% { background-color: #b9854e; }
+    62.5% { background-color: #b9854e; }
+    75% { background-color: #b5722e; }
+    87.5% { background-color: #ac6926; }
+  }
+
+  .loader div:nth-child(1) { animation-delay: -1.05s; }
+  .loader div:nth-child(2) { animation-delay: -0.9s; }
+  .loader div:nth-child(3) { animation-delay: -0.75s; }
+  .loader div:nth-child(4) { animation-delay: -0.6s; }
+  .loader div:nth-child(5) { animation-delay: -0.45s; }
+  .loader div:nth-child(6) { animation-delay: -0.3s; }
+  .loader div:nth-child(7) { animation-delay: -0.15s; }
+  .loader div:nth-child(8) { animation-delay: 0s; }
+
+  /* Styling for the "Loading" text */
+  .c-loading_text{
+    font-size: 24px;
+    color: #5c3e2b;
+    margin-top: -5.5rem;
+  }

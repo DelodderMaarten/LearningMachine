@@ -1,0 +1,9 @@
+.c-running{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden-running {
+    display: none;
+  }
