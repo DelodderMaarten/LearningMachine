@@ -9,13 +9,40 @@
 
 </head>
 <body>
-  <h1 class="h1">HandPose</h1>
-  <h2 id="state"></h2>
-  <canvas id="canvas" class="fancy-shadow hidden display-running"></canvas>
-  <div id="results" class="fancy-shadow hidden display-running"></div>
+
+    <h1 class="h1 c-title">Gesture Garden</h1>
+    <div id="loader" class="c-loading hidden display-loading ">
+       
+        <div class="loader-container">
+            <div class="loader">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <h2 class="c-loading_text" id="state"></h2>
+          </div>
+
+    </div>
+
+    <div class="c-running hidden display-running">
+       
+        <h2 id="state"></h2>
+        <canvas id="canvas" class="fancy-shadow"></canvas>
+        <div id="results" class="fancy-shadow "></div>
+    </div>
+
+
+
+
   <script src="https://unpkg.com/ml5@1/dist/ml5.js"></script>
-  <script src="js/handpose.js"></script>
-  <script src="js/sound.js"></script>
+  <script type="module" src="js/modelsready.js"></script>
+  
+  
   
 </body>
 </html>

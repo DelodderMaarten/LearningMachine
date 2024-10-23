@@ -22,13 +22,16 @@
       "stop",
       "yes",
       "no",
+      "kanker",
     ];
 
     const STATE_LOADING_SOUND = "loading";
     const STATE_RUNNING_SOUND = "running";
     const ALL_STATES_SOUND = [STATE_LOADING_SOUND, STATE_RUNNING_SOUND];
     let stateSound  = STATE_LOADING_SOUND;
+ 
 
+   
     const setStateSound = (value) => {
       console.log('setState', value);
       stateSound = value;
@@ -47,6 +50,7 @@
       setupSound();
     }
 
+
     const setupSound = async () => {
       console.log('setupSound');
       // no need for video stream
@@ -59,6 +63,8 @@
       });
       // start the app
       setStateSound(STATE_RUNNING_SOUND);
+      
+      
     }
 
     const drawSound = () => {
